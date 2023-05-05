@@ -22,6 +22,11 @@ pipeline {
                 sh 'echo "Hi"'
             }
         }
+        stage('Artifact push') {
+            steps {
+                sh 'echo "Hi"'
+            }
+        }
         stage('Deploy') {
             steps {
                 sh 'echo "Hi"'
