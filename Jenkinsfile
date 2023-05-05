@@ -13,10 +13,19 @@ pipeline {
             }
         }
         stage('SonarQube SAST') {
+            steps {
+                sh 'echo "Hi"'
+            }
         }
         stage('Build') {
+            steps {
+                sh 'echo "Hi"'
+            }
         }
         stage('Deploy') {
+            steps {
+                sh 'echo "Hi"'
+            }
         }
     }
 }
