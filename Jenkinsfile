@@ -7,7 +7,7 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Package into zip') {
+        stage('Archieve') {
             steps {
                 sh 'tar czf demo_app_$BUILD_NUMBER.tar.gz node_modules main.js package.json LICENSE public'
             }
