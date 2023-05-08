@@ -1,10 +1,13 @@
 pipeline {
     agent any
-    tools {nodejs 'NodeJS'}
+    tools {nodejs 'NodeJS'
+           //maven 'Maven'
+           //sonarqube 'SonarQube'}
     stages {
         stage('install dependencies') {
             steps {
                 sh 'npm install'
+                //sh 'maven clean install'
             }
         }
         stage('Archieve application zip') {
@@ -37,6 +40,14 @@ pipeline {
             steps {
                 sh 'echo "Hi"'
             }
+        }
+    }
+    post{
+        success {
+            sh 'echo success'
+        }
+        failure {
+            sh 'echo failure'
         }
     }
 }
