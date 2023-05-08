@@ -24,6 +24,11 @@ pipeline {
                 //sh 'npm run build'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'echo "Some test cases"'
+            }
+        }
         stage('Dependency tracker') {
             steps {
                 sh 'echo "Hi"'
