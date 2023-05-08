@@ -8,6 +8,7 @@ pipeline {
         stage('install dependencies') {
             steps {
                 sh 'npm install'
+                //sh 'npm start'
                 //sh 'maven clean install'
             }
         }
@@ -20,6 +21,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Hi"'
+                //sh 'npm run build'
             }
         }
         stage('Dependency tracker') {
