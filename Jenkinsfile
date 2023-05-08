@@ -30,6 +30,7 @@ pipeline {
         stage('SonarQube SAST') {
             steps {
                 sh 'echo "Hi"'
+                //withSonarQubeEnv('SonarQube'){ sh 'sonar-scanner'}
             }
         }
         stage('Artifact versioning & push') {
