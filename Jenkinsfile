@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Archieve application zip') {
             steps {
+                sh 'rm -rf *.tar.gz'
                 sh 'tar czf demo_app_$BUILD_NUMBER.tar.gz node_modules main.js package.json LICENSE public'
             }
         }
