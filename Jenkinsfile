@@ -54,9 +54,11 @@ pipeline {
     post{
         success {
             sh 'echo success'
+            //mail to: team@example.com, subject: 'Pipeline sucessfull'
         }
         failure {
             sh 'echo failure'
+            //mail to: team@example.com, subject: 'Pipeline failure'
         }
     }
 }
