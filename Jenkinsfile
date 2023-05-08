@@ -12,17 +12,22 @@ pipeline {
                 sh 'tar czf demo_app_$BUILD_NUMBER.tar.gz node_modules main.js package.json LICENSE public'
             }
         }
-        stage('SonarQube SAST') {
-            steps {
-                sh 'echo "Hi"'
-            }
-        }
         stage('Build') {
             steps {
                 sh 'echo "Hi"'
             }
         }
-        stage('Artifact push') {
+        stage('Dependency tracker') {
+            steps {
+                sh 'echo "Hi"'
+            }
+        }
+        stage('SonarQube SAST') {
+            steps {
+                sh 'echo "Hi"'
+            }
+        }
+        stage('Artifact versioning & push') {
             steps {
                 sh 'echo "Hi"'
             }
