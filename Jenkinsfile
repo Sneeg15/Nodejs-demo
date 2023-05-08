@@ -2,7 +2,8 @@ pipeline {
     agent any
     tools {nodejs 'NodeJS'
            //maven 'Maven'
-           //sonarqube 'SonarQube'}
+           //sonarqube 'SonarQube'
+          }
     stages {
         stage('install dependencies') {
             steps {
